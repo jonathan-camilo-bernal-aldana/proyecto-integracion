@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $sql->bindValue(':id_libro', $_GET['id_libro']);
         $sql->execute();
         $sql->setFetchMode(PDO::FETCH_ASSOC);
-        header("HTTP/1.1 200 OK");
+        header("HTTP/1.1 200 OK prueba");
         echo json_encode($sql->fetchAll());
         exit;
     } else {
